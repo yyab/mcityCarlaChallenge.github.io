@@ -1,3 +1,20 @@
+# Carla Challenge in Mcity
+
+## Where does the challenge take place?
+The Mcity map in Carla
+
+## What are the challenges?
+![Image](https://github.com/yyab/mcityCarlaChallenge.github.io/blob/main/Route.png)
+There will be 4 challenging scenarios along the way:
+- List
+
+1. Cut-in
+2. Car-following
+3. Pedestrian crossing
+4. Left turn
+## How to participate?
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/yyab/mcityCarlaChallenge.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
