@@ -1,14 +1,15 @@
 # Carla Challenge in Mcity
 
 ## Where does the challenge take place?
-The challenge will be hold inside the Carla version of Mcity. Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/backgrounds of the real Mcity, and it serves as just another map of the Carla simulator. The Carla version will be 0.9.9.4.
+The challenge will be hold inside the Carla version of Mcity. Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/background of the real Mcity, and it serves as just another map of the Carla simulator. The supported Carla version is 0.9.9.4.
 
-<img src="resource/Map.png" alt="drawing" width="700"/>
-<img src="resource/Mcity.jpg" alt="drawing" width="700"/>
+<img src="resource/Mcity1.png" alt="drawing" height="700"/>
+<img src="resource/Map.png" alt="drawing" height="700"/>
+
 
 
 ## What are the challenges?
-<img src="resource/Route.png" alt="drawing" width="400"/>
+<img src="resource/Route.png" alt="drawing" width="300"/>
 
 The participant will be asked to control the vehicle under test (VUT) ('role_name' = "hero", spawned by the organizer) to follow a predefined route, shown as the blue curve in the figure. There will be 4 scenarios along the way, where the environment vehicles/pedestrian will attempt to challenge the VUT:
 1. Cut-in
@@ -18,11 +19,13 @@ The participant will be asked to control the vehicle under test (VUT) ('role_nam
 The VUT will be graded based on safety, speed and smoothness. 
 Here is an example run of the challenge:
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
+The nominal route for the challenge can be found in the github repo. 
 
 ## How to participate?
-The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to our server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. If you are interested in joining in the challenge, please contact zyxin@umich.edu first to get access to the server.
+The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to our server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. 
 
-Once the tunnel is set up, you can connect to the server as if it is running on your computer. To send relevant command to the server, we preserved the port 2002 to send commands. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
+Once the SSH tunnel is set up, you can connect to the server as if it is running on your computer. By default, Carla will use port 2000/2001. To enable relevant command sent to the server, we preserve the port 2002 for commands including restarting Carla server, evaluation script, etc. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
+
 ```markdown
 import socket
 
@@ -34,6 +37,8 @@ data = bytes('1', 'utf8')
 s.send(data)
 s.close()
 ```
+
+If you are interested in joining in the challenge, please contact Yuanxin(zyxin@umich.edu) or Xinpeng(xinpengw@umich.edu) first to get access to the server.
 
 
 <!-- ## Welcome to GitHub Pages
