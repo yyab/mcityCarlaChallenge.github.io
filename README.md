@@ -3,7 +3,7 @@
 ## Where does the challenge take place?
 The challenge will be hold inside the Carla version of Mcity. Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/background of the real Mcity, and it serves as just another map of the Carla simulator. The supported Carla version is 0.9.9.4.
 
-<img src="resource/Mcity1.png" alt="drawing" width="700"/>
+<img src="resource/Mcity11.png" alt="drawing" width="700"/>
 <img src="resource/Map.png" alt="drawing" width="700"/>
 
 
