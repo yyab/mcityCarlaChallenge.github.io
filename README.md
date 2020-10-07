@@ -4,15 +4,17 @@
 The Mcity map in Carla
 
 ## What are the challenges?
-![Image](https://github.com/yyab/mcityCarlaChallenge.github.io/blob/main/Route.png)
-There will be 4 challenging scenarios along the way:
-- List
+<img src="Route.png" alt="drawing" width="400"/>
 
+There will be 4 challenging scenarios along the way:
 1. Cut-in
 2. Car-following
 3. Pedestrian crossing
 4. Left turn
 ## How to participate?
+SSH connection:
+IP address: 
+Port:
 
 
 ## Welcome to GitHub Pages
