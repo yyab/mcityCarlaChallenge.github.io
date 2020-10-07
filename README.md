@@ -2,9 +2,9 @@
 
 ## Where does the challenge take place?
 The Mcity map in Carla
-
+<img src="resource/Map.png" alt="drawing" width="400"/>
 ## What are the challenges?
-<img src="Route.png" alt="drawing" width="400"/>
+<img src="resource/Route.png" alt="drawing" width="400"/>
 
 There will be 4 challenging scenarios along the way:
 1. Cut-in
@@ -14,7 +14,19 @@ There will be 4 challenging scenarios along the way:
 ## How to participate?
 SSH connection:
 IP address: 
-Port:
+Remote control the script:
+
+```markdown
+import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(('localhost', 2002))
+print(s.recv(1024))
+# 1 for initializing from start; 2 before the pedestrian crossing; 3 before the left turn
+data = bytes('1', 'utf8')
+s.send(data)
+s.close()
+```
 
 
 ## Welcome to GitHub Pages
