@@ -1,29 +1,28 @@
 # Carla Challenge in Mcity
 
 ## Where does the challenge take place?
-The Mcity map in Carla
+The challenge will be hold inside the Carla version of Mcity. Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/backgrounds of the real Mcity, and it serves as just another map of the Carla simulator. The Carla version will be 0.9.9.4.
 
-<img src="resource/Map.png" alt="drawing" width="400"/>
+<img src="resource/Map.png" alt="drawing" width="600"/>
 
 
 
 ## What are the challenges?
 <img src="resource/Route.png" alt="drawing" width="400"/>
 
-There will be 4 challenging scenarios along the way:
+The participant will be asked to control the vehicle under test (VUT) ('role_name' = "hero", spawned by the organizer) to follow a predefined route, shown as the blue curve in the figure. There will be 4 scenarios along the way, where the environment vehicles/pedestrian will attempt to challenge the VUT:
 1. Cut-in
 2. Car-following
 3. Pedestrian crossing
-4. Left turn
-
-An example run looks like this:
+4. Unprotected left turn
+The VUT will be graded based on safety, speed and smoothness. 
+Here is an example run of the challenge:
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
 
 ## How to participate?
-SSH connection:
-IP address: 
-Remote control the script:
+The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to our server through SSH tunnel with key authentication. If you are interested in joining in the challenge, please contact zyxin@umich.edu first to get access to the server.
 
+Once the tunnel is set up, you can connect to the server as if it is running on your computer. To send relevant command to the server, we preserved the port 2002 to send commands. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
 ```markdown
 import socket
 
@@ -37,7 +36,7 @@ s.close()
 ```
 
 
-## Welcome to GitHub Pages
+<!-- ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/yyab/mcityCarlaChallenge.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
@@ -73,4 +72,6 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out. 
+
+-->
