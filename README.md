@@ -2,7 +2,11 @@
 
 ## Where does the challenge take place?
 The Mcity map in Carla
+
 <img src="resource/Map.png" alt="drawing" width="400"/>
+
+
+
 ## What are the challenges?
 <img src="resource/Route.png" alt="drawing" width="400"/>
 
@@ -11,6 +15,10 @@ There will be 4 challenging scenarios along the way:
 2. Car-following
 3. Pedestrian crossing
 4. Left turn
+
+An example run looks like this:
+[![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
+
 ## How to participate?
 SSH connection:
 IP address: 
