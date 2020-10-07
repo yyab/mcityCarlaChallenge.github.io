@@ -20,7 +20,7 @@ Here is an example run of the challenge:
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
 
 ## How to participate?
-The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to our server through SSH tunnel with key authentication. If you are interested in joining in the challenge, please contact zyxin@umich.edu first to get access to the server.
+The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to our server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. If you are interested in joining in the challenge, please contact zyxin@umich.edu first to get access to the server.
 
 Once the tunnel is set up, you can connect to the server as if it is running on your computer. To send relevant command to the server, we preserved the port 2002 to send commands. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
 ```markdown
