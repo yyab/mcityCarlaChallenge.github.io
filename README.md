@@ -9,7 +9,7 @@ The challenge will be hold inside the Carla version of Mcity. Mcity is a 32-acre
 
 
 ## What are the challenges?
-<img src="resource/Route.png" alt="drawing" width="300"/>
+<img src="resource/Route.png" alt="drawing" width="400"/>
 
 The participant will be asked to control the vehicle under test (VUT) ('role_name' = "hero", spawned by the organizer) to follow a predefined route, shown as the blue curve in the figure. There will be 4 scenarios along the way, where the environment vehicles/pedestrian will attempt to challenge the VUT:
 1. Cut-in
@@ -22,7 +22,7 @@ Here is an example run of the challenge:
 The nominal route for the challenge can be found in the github repo. 
 
 ## How to participate?
-The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to our server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. 
+The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to the server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. 
 
 Once the SSH tunnel is set up, you can connect to the server as if it is running on your computer. By default, Carla will use port 2000/2001. To enable relevant command sent to the server, we preserve the port 2002 for commands including restarting Carla server, evaluation script, etc. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
 
