@@ -18,7 +18,10 @@ The participant will be asked to control the vehicle under test (VUT) ('role_nam
 4. Unprotected left turn
 
 <img src="resource/scenarios1.png" alt="drawing" width="700"/>
-In each run, only one participating team will control the VUT. All the environment vehicles/pedestrian are controlled by a challenge script running on the server, which is provided by the University of Michigan. The parameter of each scenario will be randomly sampled from its parameter space according to some given challenge level. The VUT will be graded based on safety, average speed and smoothness when driving along the route. Details on scoring system will be announced soon.
+
+All the environment vehicles/pedestrian are controlled by a challenge script running on the server, which is provided by the University of Michigan. The parameter of each scenario will be randomly sampled from its parameter space according to some given challenge level. 
+
+In each run, only one participating team will control the VUT. The VUT will be graded based on safety, average speed and smoothness when driving along the route. Details on scoring system will be announced soon.
 
 Here is an example run of the challenge. Click the picture to check out the video on YouTube. 
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
