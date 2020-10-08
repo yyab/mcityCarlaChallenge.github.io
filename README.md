@@ -17,7 +17,7 @@ The participant will be asked to control the vehicle under test (VUT) ('role_nam
 3. Pedestrian crossing
 4. Unprotected left turn
 
-<img src="resource/scenarios.png" alt="drawing" width="600"/>
+<img src="resource/scenarios1.png" alt="drawing" width="700"/>
 
 The VUT will be graded based on safety, speed and smoothness when driving along the route.
 
@@ -62,6 +62,7 @@ Current implemented commands include
 |1| Initiate a test run from the start|
 |2| Initiate the pedestrian crossing & left turn challenge|
 |3| Initiate the left turn challenge|
+
 To start a test run, you should first run the code above the launch the challenge script, then start your controller to control the VUT.
 
 ### A provisional schedule 
