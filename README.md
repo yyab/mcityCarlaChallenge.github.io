@@ -11,21 +11,24 @@ The challenge will be hold inside the [Carla](https://carla.org/) version of [Mc
 ## What are the challenges?
 <img src="resource/Route.png" alt="drawing" width="400"/>
 
-The participant will be asked to control the vehicle under test (VUT) ('role_name' = "hero", spawned by the organizer) to follow a predefined route, shown as the blue curve in the figure. There will be 4 scenarios along the way, where the environment vehicles/pedestrian will attempt to challenge the VUT:
+The participant will be asked to control the vehicle under test (VUT) ('role_name' = "hero", spawned by the organizer) to follow a nominal route, shown as the blue curve in the figure. There will be 4 scenarios along the way, where the environment vehicles/pedestrian will attempt to challenge the VUT:
 1. Cut-in
 2. Car-following
 3. Pedestrian crossing
 4. Unprotected left turn
 
-The VUT will be graded based on safety, speed and smoothness.
+<img src="resource/scenarios.png" alt="drawing" width="600"/>
+
+The VUT will be graded based on safety, speed and smoothness when driving along the route.
 
 Here is an example run of the challenge. Click the picture to check out the video on YouTube. 
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
 
-The nominal route for the challenge can be found in the github repo. 
+The challenge script is running on the server and provided by University of Michigan. The nominal route for the challenge can be found in the github repo. 
 
 ## How to participate?
-The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to the server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. 
+### Remote connection
+The simulator server and challenge script will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to the server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. 
 
 To establish a SSH tunnel, one can use the command listed below (take MIT team as example)
 ```bash
@@ -39,7 +42,7 @@ See the table below for the name of user assigned to the teams
 
 Once the SSH tunnel is set up, you can connect to the server as if it is running on your computer. We set the connection limitation such that only one logins across the teams could be established. So if you find SSH says `Too many logins for xxx`, that indicates that other team are connecting to the server. We make sure that only one team can connect to the server and evaluate their agent at the same time through this way. Also note that this also means each user can only have one login shell at the same time. Please use utils like `tmux` if you need multiple shells. Please also make sure that you terminated the login shell correctly so that other teams can connect in.
 
-By default, Carla will use port 2000/2001. To enable relevant command sent to the server, we preserve the port 2002 for commands including restarting Carla server, evaluation script, etc. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
+By default, Carla will use port 2000/2001. To enable relevant command sent to the server, we preserve the port 2002 for commands including restarting Carla server, challenge script, etc. Therefore, you can add tunnel for 2002 when connecting. Here is the code for sending command to control the challenge script to start at different points:
 
 ```python
 import socket
@@ -59,7 +62,14 @@ Current implemented commands include
 |1| Initiate a test run from the start|
 |2| Initiate the pedestrian crossing & left turn challenge|
 |3| Initiate the left turn challenge|
+To start a test run, you should first run the code above the launch the challenge script, then start your controller to control the VUT.
 
+### A provisional schedule 
+To avoid conflict on server connection, we made a simple schedule for teams to access the server:
+
+Oct 8 is for Stanford team, while Oct 9 for MIT team. Starting from the week of Oct 12, the MIT team can connect on Monday & Wednesday, the Stanford team can connect on Tuesday & Thursday, while Michigan team on Friday.
+
+### Contacts 
 If you are interested in joining in the challenge, please first contact Yuanxin(zyxin@umich.edu) or Xinpeng(xinpengw@umich.edu) to get access to the server.
 
 
