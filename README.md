@@ -57,11 +57,16 @@ s.close()
 ```
 
 Current implemented commands include
+<!--
 |Binary Value| Command|
 |----|----|
 |1| Initiate a test run from the start|
 |2| Initiate the pedestrian crossing & left turn challenge|
-|3| Initiate the left turn challenge|
+|3| Initiate the left turn challenge|-->
+- '1': Initiate a test run from the start
+- '2': Initiate the pedestrian crossing & left turn challenge
+- '3': Initiate the left turn challenge
+
 
 To start a test run, you should first run the code above the launch the challenge script, then start your controller to control the VUT.
 
