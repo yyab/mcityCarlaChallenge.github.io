@@ -30,8 +30,9 @@ ssh mit@141.211.37.251 -L 2000:localhost:2000 -L 2001:localhost:2001 -L 2002:loc
 ```
 See the table below for the name of user assigned to the teams
 |User Name|Team|
-|mit| Massachusetts Institute of Technology |
-|stanford| Stanford |
+|---|---|
+|`mit`| Massachusetts Institute of Technology |
+|`stanford`| Stanford University |
 
 Once the SSH tunnel is set up, you can connect to the server as if it is running on your computer. We set the connection limitation such that only one logins across the teams could be established. So if you find SSH says `Too many logins for xxx`, that indicates that other team are connecting to the server. We make sure that only one team can connect to the server and evaluate their agent at the same time through this way. Also note that this also means each user can only have one login shell at the same time. Please use utils like `tmux` if you need multiple shells. Please also make sure that you terminated the login shell correctly so that other teams can connect in.
 
