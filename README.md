@@ -1,7 +1,7 @@
 # Carla Challenge in Mcity
 
 ## Where does the challenge take place?
-The challenge will be hold inside the [Carla](https://carla.org/) version of [Mcity](https://mcity.umich.edu/). Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/background of the real Mcity, and it serves as just another map of the Carla simulator. The supported Carla version is [0.9.9.4](https://github.com/carla-simulator/carla/tree/0.9.9.4). To learn more about the Carla simulator, please check out the [official documentations](https://carla.readthedocs.io/en/latest/).
+The challenge will be held inside the [Carla](https://carla.org/) version of [Mcity](https://mcity.umich.edu/). Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/background of the real Mcity, and it serves as just another map of the Carla simulator. The supported Carla version is [0.9.9.4](https://github.com/carla-simulator/carla/tree/0.9.9.4). To learn more about the Carla simulator, please check out the [official documentations](https://carla.readthedocs.io/en/latest/).
 
 <img src="resource/Mcity11.png" alt="drawing" width="700"/>
 <img src="resource/Map.png" alt="drawing" width="700"/>
@@ -18,13 +18,12 @@ The participant will be asked to control the vehicle under test (VUT) ('role_nam
 4. Unprotected left turn
 
 <img src="resource/scenarios1.png" alt="drawing" width="700"/>
-
-The VUT will be graded based on safety, speed and smoothness when driving along the route.
+Each run, only one participating team will control the VUT. All the environment vehicles/pedestrian are controlled by a challenge script running on the server, which is provided by the University of Michigan. The parameter of each scenario will be randomly sampled from its parameter space according to some given challenge level. The VUT will be graded based on safety, speed and smoothness when driving along the route. Details on scoring system will be announced soon.
 
 Here is an example run of the challenge. Click the picture to check out the video on YouTube. 
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
 
-The challenge script is running on the server and provided by University of Michigan. The nominal route for the challenge can be found in the github repo. 
+The nominal route for the challenge can be found in the github repo. 
 
 ## How to participate?
 ### Remote connection
@@ -76,7 +75,7 @@ To avoid conflicts on server connection, we made a simple schedule for all teams
 For initial testing and debugging, Stanford team can connect on Oct 8, while MIT team can connect on Oct 9. Starting from the week of Oct 12, the MIT team can connect on Monday & Wednesday, the Stanford team can connect on Tuesday & Thursday, while Michigan team on Friday.
 
 ### Contacts 
-If you are interested in joining in the challenge, please first contact Yuanxin(zyxin@umich.edu) or Xinpeng(xinpengw@umich.edu) to get access to the server.
+If you are interested in joining in the challenge, please first contact Yuanxin Zhong(zyxin@umich.edu) or Xinpeng Wang(xinpengw@umich.edu) to get access to the server.
 
 
 <!-- ## Welcome to GitHub Pages
