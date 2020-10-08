@@ -1,7 +1,7 @@
 # Carla Challenge in Mcity
 
 ## Where does the challenge take place?
-The challenge will be hold inside the Carla version of Mcity. Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/background of the real Mcity, and it serves as just another map of the Carla simulator. The supported Carla version is 0.9.9.4.
+The challenge will be hold inside the [Carla](https://carla.org/) version of Mcity. Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/background of the real Mcity, and it serves as just another map of the Carla simulator. The supported Carla version is [0.9.9.4](https://github.com/carla-simulator/carla/tree/0.9.9.4). To learn more about the Carla simulator, please check out the [documentations](https://carla.readthedocs.io/en/latest/).
 
 <img src="resource/Mcity11.png" alt="drawing" width="700"/>
 <img src="resource/Map.png" alt="drawing" width="700"/>
@@ -17,7 +17,7 @@ The participant will be asked to control the vehicle under test (VUT) ('role_nam
 3. Pedestrian crossing
 4. Unprotected left turn
 
-The VUT will be graded based on safety, speed and smoothness. 
+The VUT will be graded based on safety, speed and smoothness.
 
 Here is an example run of the challenge. Click the picture to check out the video on YouTube. 
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
