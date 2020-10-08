@@ -16,9 +16,12 @@ The participant will be asked to control the vehicle under test (VUT) ('role_nam
 2. Car-following
 3. Pedestrian crossing
 4. Unprotected left turn
+
 The VUT will be graded based on safety, speed and smoothness. 
-Here is an example run of the challenge:
+
+Here is an example run of the challenge. Click the picture to check out the video on YouTube. 
 [![SampleRun](resource/videoclip.png)](https://www.youtube.com/watch?v=rw22kinHzqM)
+
 The nominal route for the challenge can be found in the github repo. 
 
 ## How to participate?
