@@ -1,4 +1,4 @@
-# Carla Challenge in Mcity
+# Mcity Carla Challenge
 
 ## Where does the challenge take place?
 The challenge will be held inside the [Carla](https://carla.org/) version of [Mcity](https://mcity.umich.edu/). Mcity is a 32-acre proving ground for the testing of connected and automated vehicles located on the University of Michigan in Ann Arbor, Michigan. We build the Carla Mcity based on the true dimensions/background of the real Mcity, and it serves as just another map of the Carla simulator. The supported Carla version is [0.9.9.4](https://github.com/carla-simulator/carla/tree/0.9.9.4). To learn more about the Carla simulator, please check out the [official documentations](https://carla.readthedocs.io/en/latest/).
