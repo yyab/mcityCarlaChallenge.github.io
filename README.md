@@ -66,9 +66,9 @@ Current implemented commands include
 To start a test run, you should first run the code above the launch the challenge script, then start your controller to control the VUT.
 
 ### A provisional schedule 
-To avoid conflict on server connection, we made a simple schedule for teams to access the server:
+To avoid conflicts on server connection, we made a simple schedule for all teams to access the server:
 
-Oct 8 is for Stanford team, while Oct 9 for MIT team. Starting from the week of Oct 12, the MIT team can connect on Monday & Wednesday, the Stanford team can connect on Tuesday & Thursday, while Michigan team on Friday.
+For initial testing and debugging, Stanford team can connect on Oct 8, while MIT team can connect on Oct 9. Starting from the week of Oct 12, the MIT team can connect on Monday & Wednesday, the Stanford team can connect on Tuesday & Thursday, while Michigan team on Friday.
 
 ### Contacts 
 If you are interested in joining in the challenge, please first contact Yuanxin(zyxin@umich.edu) or Xinpeng(xinpengw@umich.edu) to get access to the server.
