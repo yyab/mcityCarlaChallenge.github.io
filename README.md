@@ -24,19 +24,37 @@ The nominal route for the challenge can be found in the github repo.
 ## How to participate?
 The simulator server and challenge scripte will be running on a dedicated server at University of Michigan. Participant are asked to remotely connect to the server through SSH tunnel with key authentication. Currently, the challenge is open to student teams from Stanford Univeristy, Massachusetts Institute of Technology and University of Michigan. 
 
-Once the SSH tunnel is set up, you can connect to the server as if it is running on your computer. By default, Carla will use port 2000/2001. To enable relevant command sent to the server, we preserve the port 2002 for commands including restarting Carla server, evaluation script, etc. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
+To establish a SSH tunnel, one can use the command listed below (take MIT team as example)
+```bash
+ssh mit@141.211.37.251 -L 2000:localhost:2000 -L 2001:localhost:2001 -L 2002:localhost:2002
+```
+See the table below for the name of user assigned to the teams
+|User Name|Team|
+|mit| Massachusetts Institute of Technology |
+|stanford| Stanford |
 
-```markdown
+Once the SSH tunnel is set up, you can connect to the server as if it is running on your computer. We set the connection limitation such that only one logins across the teams could be established. So if you find SSH says `Too many logins for xxx`, that indicates that other team are connecting to the server. We make sure that only one team can connect to the server and evaluate their agent at the same time through this way. Also note that this also means each user can only have one login shell at the same time. Please use utils like `tmux` if you need multiple shells. Please also make sure that you terminated the login shell correctly so that other teams can connect in.
+
+By default, Carla will use port 2000/2001. To enable relevant command sent to the server, we preserve the port 2002 for commands including restarting Carla server, evaluation script, etc. Therefore, you can add tunnel for 2002 when connecting. Here are the codes for sending command to control the challenge script:
+
+```python
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(('localhost', 2002))
 print(s.recv(1024))
-# 1 for initializing from start; 2 before the pedestrian crossing; 3 before the left turn
+# See table below for meanings of the value
 data = bytes('1', 'utf8')
 s.send(data)
 s.close()
 ```
+
+Current implemented commands include
+|Binary Value| Command|
+|----|----|
+|1| Initiate a test run|
+|2| Initiate the pedestrian crossing challenge|
+|3| Initiate the left turn challenge|
 
 If you are interested in joining in the challenge, please contact Yuanxin(zyxin@umich.edu) or Xinpeng(xinpengw@umich.edu) first to get access to the server.
 
