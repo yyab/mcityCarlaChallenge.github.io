@@ -95,16 +95,16 @@ $ 𝑆𝑐𝑜𝑟𝑒 = max⁡(100−5\Sigma_{𝑖=1}^4 max⁡(0,  5−d_i^{min
 - Efficiency: time to finish the route (sec): $T$:
 
 $ 𝑆𝑐𝑜𝑟𝑒 = max⁡(100−0.5(T−120),0)$
-- Speed compliance: cumulated speeding penalty: ($m/s$):
+- Speed compliance: cumulated speeding penalty ($m/s$):
 
-$ 𝑆𝑐𝑜𝑟𝑒 = max⁡(100−0.5\int_{0}^{T} \mathbf{𝐼}_{(v>v_{lim} )} (v−v_{lim} )^2 𝑑𝑡, 0)$,  $(𝑣_{𝑙𝑖𝑚}=20𝑚𝑝ℎ) $
+$ Score = max(100-0.5\int_{0}^T \mathbf{I}_{v>v_{limm}}(v-v_{lim})^2 dt, 0), v_{lim} = 20 mph / 8.9m/s$
 - Path tracking accuracy: # of “lane departure” events over the entire route: $𝑛_{𝐿𝐷}$;
 Defined as events reported by the lane-invasion detector when crossing solid lane marks
 
 $ 𝑆𝑐𝑜𝑟𝑒 = max(100−5𝑛_{𝐿𝐷},0)$ 
 - Smoothness: cumulated penalty on hard acceleration over the entire run ($𝑚/𝑠^2$)
 
-$ 𝑆𝑐𝑜𝑟𝑒 = max⁡(100−0.1\int_{0}^{T} \mathbf{𝐼}_{acc(𝑡)>0.20𝑔 \vee acc(t)<−0.41𝑔} acc^2(t) 𝑑𝑡, 0) $
+$ 𝑆𝑐𝑜𝑟𝑒 = max⁡(100−0.1\int_{0}^{T} \mathbf{I}_{acc(𝑡)>0.20𝑔 \vee acc(t)<−0.41𝑔} acc^2(t) 𝑑𝑡, 0) $
 
 
 
