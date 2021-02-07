@@ -90,7 +90,7 @@ To start a test run, you should first run the code above to launch the challenge
 ## Scoring criteria
 5 separate scores: up to 100 points each
 - Safety: min distance to the “challenger” in each of the 4 scenarios (m): 𝑑_𝑖^𝑚𝑖𝑛  𝑖={1,2,3,4}
-$$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−5\Sigma_{𝑖=1}^4 max⁡(0,  5−𝑑_𝑖^{𝑚𝑖𝑛} ) ,0) $$
+$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−5\Sigma_{𝑖=1}^4 max⁡(0,  5−𝑑_𝑖^{𝑚𝑖𝑛} ) ,0) $
 - Efficiency: time to finish the route (sec): 𝑇
 $$ 𝑆𝑐𝑜𝑟𝑒 =max⁡(100−0.5(𝑇−120),0)$$
 - Speed compliance: cumulated speeding penalty: (m/s)
