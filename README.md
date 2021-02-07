@@ -89,17 +89,17 @@ To start a test run, you should first run the code above to launch the challenge
 
 ## Scoring criteria
 5 separate scores: up to 100 points each
-- Safety: min distance to the “challenger” in each of the 4 scenarios (m): 𝑑_𝑖^𝑚𝑖𝑛  𝑖={1,2,3,4}
-$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−5\Sigma_{𝑖=1}^4 max⁡(0,  5−𝑑_𝑖^{𝑚𝑖𝑛} ) ,0) $
-- Efficiency: time to finish the route (sec): 𝑇
-$$ 𝑆𝑐𝑜𝑟𝑒 =max⁡(100−0.5(𝑇−120),0)$$
+- Safety: min distance to the “challenger” in each of the 4 scenarios ($m$): $d_i^{min}, i={1,2,3,4}$
+$ 𝑆𝑐𝑜𝑟𝑒=/max⁡(100−5\Sigma_{𝑖=1}^4 max⁡(0,  5−𝑑_𝑖^{𝑚𝑖𝑛} ) ,0) $
+- Efficiency: time to finish the route (sec): $T$
+$ 𝑆𝑐𝑜𝑟𝑒 =/max⁡(100−0.5(T−120),0)$
 - Speed compliance: cumulated speeding penalty: (m/s)
-$$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−0.5∫_0^𝑇▒〖𝐼_((𝑣>𝑣_𝑙𝑖𝑚 ) ) (𝑣−𝑣_𝑙𝑖𝑚 )^2 𝑑𝑡,0)〗  (𝑣_𝑙𝑖𝑚=20𝑚𝑝ℎ)
-- Path tracking accuracy: # of “lane departure” events over the entire route: 𝑛_𝐿𝐷
+$ 𝑆𝑐𝑜𝑟𝑒=/max⁡(100−0.5\int_{0}^{T} \mathbf{𝐼}_{(v>v_{𝑙𝑖𝑚} )} (v−v_{𝑙𝑖𝑚} )^2 𝑑𝑡, 0),  (𝑣_{𝑙𝑖𝑚}=20𝑚𝑝ℎ)$
+- Path tracking accuracy: # of “lane departure” events over the entire route: $𝑛_{𝐿𝐷}$
 Defined as events reported by the lane-invasion detector when crossing solid lane marks
-$$ 𝑆𝑐𝑜𝑟𝑒=max(100−5𝑛_𝐿𝐷,0)$$ 
-- Smoothness: cumulated penalty on hard acceleration over the entire run (𝑚/𝑠^2)
-$$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−0.1∫_0^𝑇▒〖〖𝐼_((𝑎𝑐𝑐(𝑡)>0.20𝑔 ||𝑎𝑐𝑐(𝑡)<−0.41𝑔)) 𝑎𝑐𝑐(𝑡)〗^2 𝑑𝑡,0)〗$$
+$ 𝑆𝑐𝑜𝑟𝑒=/max(100−5𝑛_{𝐿𝐷},0)$ 
+- Smoothness: cumulated penalty on hard acceleration over the entire run ($𝑚/𝑠^2$)
+$ 𝑆𝑐𝑜𝑟𝑒=/max⁡(100−0.1\int_{0}^{T} \mathbf{𝐼}_{(𝑎𝑐𝑐(𝑡)>0.20𝑔 \vee 𝑎𝑐𝑐(𝑡)<−0.41𝑔)} 𝑎𝑐𝑐(𝑡)^2 𝑑𝑡, 0) $
 
 
 
