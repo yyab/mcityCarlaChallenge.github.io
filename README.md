@@ -1,3 +1,15 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 # Mcity Carla Challenge
 
 ## Where does the challenge take place?
@@ -72,10 +84,29 @@ Current implemented commands include
 
 To start a test run, you should first run the code above to launch the challenge script, then start your controller to control the VUT.
 
-### A provisional schedule 
+### Agent set-up
+
+
+## Scoring criteria
+5 separate scores: up to 100 points each
+- Safety: min distance to the “challenger” in each of the 4 scenarios (m): 𝑑_𝑖^𝑚𝑖𝑛  𝑖={1,2,3,4}
+$$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−5\Sigma_{𝑖=1}^4 max⁡(0,  5−𝑑_𝑖^{𝑚𝑖𝑛} ) ,0) $$
+- Efficiency: time to finish the route (sec): 𝑇
+$$ 𝑆𝑐𝑜𝑟𝑒 =max⁡(100−0.5(𝑇−120),0)$$
+- Speed compliance: cumulated speeding penalty: (m/s)
+$$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−0.5∫_0^𝑇▒〖𝐼_((𝑣>𝑣_𝑙𝑖𝑚 ) ) (𝑣−𝑣_𝑙𝑖𝑚 )^2 𝑑𝑡,0)〗  (𝑣_𝑙𝑖𝑚=20𝑚𝑝ℎ)
+- Path tracking accuracy: # of “lane departure” events over the entire route: 𝑛_𝐿𝐷
+Defined as events reported by the lane-invasion detector when crossing solid lane marks
+$$ 𝑆𝑐𝑜𝑟𝑒=max(100−5𝑛_𝐿𝐷,0)$$ 
+- Smoothness: cumulated penalty on hard acceleration over the entire run (𝑚/𝑠^2)
+$$ 𝑆𝑐𝑜𝑟𝑒=max⁡(100−0.1∫_0^𝑇▒〖〖𝐼_((𝑎𝑐𝑐(𝑡)>0.20𝑔 ||𝑎𝑐𝑐(𝑡)<−0.41𝑔)) 𝑎𝑐𝑐(𝑡)〗^2 𝑑𝑡,0)〗$$
+
+
+
+<!-- ### A provisional schedule 
 To avoid conflicts on server connection, we made a simple schedule for all teams to access the server:
 
-For initial testing and debugging, Stanford team can connect on Oct 8, while MIT team can connect on Oct 9. Starting from the week of Oct 12, the MIT team can connect on Monday & Wednesday, the Stanford team can connect on Tuesday & Thursday, while Michigan team will user the server on Friday.
+For initial testing and debugging, Stanford team can connect on Oct 8, while MIT team can connect on Oct 9. Starting from the week of Oct 12, the MIT team can connect on Monday & Wednesday, the Stanford team can connect on Tuesday & Thursday, while Michigan team will user the server on Friday. -->
 
 ### Contacts 
 If you are interested in joining the challenge, please contact Yuanxin Zhong(zyxin@umich.edu) or Xinpeng Wang(xinpengw@umich.edu) to get access to the server.
