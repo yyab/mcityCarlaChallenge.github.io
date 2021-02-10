@@ -10,8 +10,6 @@
     </script>
 </head>
 
-# Mcity Carla Challenge
-
 ## Where does the challenge take place?
 The challenge will be held inside the [Carla](https://carla.org/) virtual town of [Mcity](https://mcity.umich.edu/). Mcity is an 18-acre proving ground purposedly built for the testing of connected and automated vehicles, managed by the University of Michigan in Ann Arbor, Michigan. We built the Carla Mcity based on the true dimensions/layout of the real Mcity test facility, and it serves as just another virtual town for the Carla simulator. The supported Carla version is [0.9.9.4](https://github.com/carla-simulator/carla/tree/0.9.9.4). To learn more about the Carla simulator, please check out the [official documentations](https://carla.readthedocs.io/en/latest/).
 
@@ -46,7 +44,7 @@ The simulation server and challenge script will be running on a dedicated server
 
 To establish a SSH tunnel, one can use the command listed below (MIT team as the example)
 ```bash
-ssh mit@141.211.37.251 -L 2000:localhost:2000 -L 2001:localhost:2001 -L 2002:localhost:2002
+ssh mit@141.211.37.222 -L 2000:localhost:2000 -L 2001:localhost:2001 -L 2002:localhost:2002
 ```
 See the table below for the approved user names
 |User Name|Team|
@@ -85,36 +83,38 @@ Current implemented commands include
 To start a test run, you should first run the code above to launch the challenge script, then start your controller to control the VUT.
 
 ### Agent set-up
-
+If you agent is connecting to the server remotely via the ROS bridge, please apply the following configurations:
+- synchronous_mode: true
+- fixed_delta_seconds: 0.02 ~ 0.04
 
 ## Scoring criteria
-5 separate scores: up to 100 points each
-- Safety: min distance to the “challenger” in each of the 4 scenarios ($m$): $d_i^{min}, i={1,2,3,4}$:
+Five separate scores: up to 100 points each
+- Safety: minimum distance to the “challenger” in each of the 4 scenarios ($m$): $d_i^{min}, i={1,2,3,4}$:
 
 $ Score = max⁡(100−5\Sigma_{𝑖=1}^4 max⁡(0,  5−d_i^{min} ) ,0) $
 - Efficiency: time to finish the route (sec): $T$:
 
 $ Score = max⁡(100−0.5(T−120),0)$
-- Speed compliance: cumulated speeding penalty when speed is above speed limit $v1$ ($m/s$):
+- Speed compliance: cumulated speeding penalty when speed $v$ is above speed limit $v1$ ($m/s$):
 
 $ Score = max(100-0.5\int_{0}^T \mathbf{I}_{v>v1}(v-v1)^2 dt, 0), v1 = 20 mph / 8.9m/s$
 - Path tracking accuracy: # of “lane departure” events over the entire route: $𝑛_{𝐿𝐷}$;
 Defined as events reported by the lane-invasion detector when crossing solid lane marks
 
 $ Score = max(100−5𝑛_{𝐿𝐷},0)$ 
-- Smoothness: cumulated penalty on hard acceleration over the entire run ($𝑚/𝑠^2$)
+- Smoothness: cumulated penalty on hard acceleration $a$ over the entire run ($𝑚/𝑠^2$)
 
-$ Score = max⁡(100−0.1\int_{0}^{T} \mathbf{I}_{acc(𝑡)>0.20𝑔 \vee acc(t)<−0.41𝑔} acc^2(t) 𝑑𝑡, 0) $
+$ Score = max⁡(100−0.1\int_{0}^{T} \mathbf{I}_{a>0.20𝑔 \vee a<−0.41𝑔} a^2(t) dt, 0) $
 
 
+## Contacts 
+If you are interested in joining the challenge, please contact Yuanxin Zhong(zyxin@umich.edu) or Xinpeng Wang(xinpengw@umich.edu) to get access to the server.
 
 <!-- ### A provisional schedule 
 To avoid conflicts on server connection, we made a simple schedule for all teams to access the server:
 
 For initial testing and debugging, Stanford team can connect on Oct 8, while MIT team can connect on Oct 9. Starting from the week of Oct 12, the MIT team can connect on Monday & Wednesday, the Stanford team can connect on Tuesday & Thursday, while Michigan team will user the server on Friday. -->
 
-### Contacts 
-If you are interested in joining the challenge, please contact Yuanxin Zhong(zyxin@umich.edu) or Xinpeng Wang(xinpengw@umich.edu) to get access to the server.
 
 <!-- ## Welcome to GitHub Pages
 
